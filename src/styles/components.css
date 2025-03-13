@@ -1,0 +1,7 @@
+:root {
+  /*Button colors*/
+  --defaul-1-btn-bg-clr: var(--primary-3);
+  --hover-1-btn-bg-clr: var(--secondary-2);
+  --defaul-2-btn-bg-clr: var(--primary-1);
+  --hover-2-btn-bg-clr: #ffe5a2;
+}
