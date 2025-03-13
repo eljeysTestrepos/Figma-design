@@ -1,0 +1,47 @@
+---
+
+---
+<footer>
+    <div class="full">
+<h5>AskExperts</h5>
+<hr>
+<span>©2022 Consultalk. All rights reserved | Terms of Service | Privacy Policy</span>
+    </div>
+</footer>
+
+
+
+<style>
+    @layer components{
+    footer{
+        display: flex;
+        justify-content: center;
+        padding: 2.2rem;
+        background-color: var(--header-bg); 
+        /* max-height: fit-content; */
+    }
+    hr{
+        display: flex;
+        justify-content: center;
+        width: calc(120rem/2);
+        border-bottom: 75rem;
+        border:solid #707070;
+        
+    }
+ 
+    .full{
+        gap:2rem;
+         display: flex;
+         margin-inline: auto;
+        /* border: solid orange; */
+        flex-direction: column;
+        max-width: 75rem;
+        flex-shrink: 0;
+        text-align: center;
+    }
+    span{
+        color: var(--secondary-2);
+        line-height: var(--body-text-lineheight);
+    }
+}
+</style>
