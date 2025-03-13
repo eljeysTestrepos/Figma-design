@@ -1,5 +1,7 @@
 /* Globale styles her */
 :root {
+  --content-width: 120rem;
+
   --primary-1: #ffcc4a;
   --primary-2: #4eaf4e;
   --primary-3: #181818;
