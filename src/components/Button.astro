@@ -1,0 +1,30 @@
+---
+const {title} = Astro.props;
+const {class: className, ...rest} = Astro.props;
+---
+<button class={className} {...rest}>{title}</button>
+
+
+
+
+
+
+
+
+
+
+<style>
+    .login_Btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 1rem;
+        border-radius: 20px;
+        background-color: var(--defaul-2-btn-bg-clr);
+        line-height: var(--button-txt-lineheight);
+        font-size: var(  --body-text);
+        color: var(--primary-3);
+    }
+
+    
+</style>

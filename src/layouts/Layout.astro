@@ -7,23 +7,25 @@ import "../styles/main.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="../styles/">
     <meta name="generator" content={Astro.generator} />
     <title>Figma to code</title>
   </head>
   <body>
-    <slot />
+   <slot />
   </body>
 </html>
 
 <style>
-  body{
+  body {
   display: grid;
-  grid-template-columns: 1fr minmax(0, var(--content-width)) 1fr;
+  grid-template-columns: 1fr minmax(0, 120rem) 1fr;
   > * {
     grid-column: 2;
   }
     .full {
-    grid-column: 1 / -1;
+      display: grid;
+    grid-template-areas: 1 / -1;
   }
   }
 

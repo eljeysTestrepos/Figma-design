@@ -1,0 +1,46 @@
+---
+import Button from "./Button.astro"
+---
+
+<header class="full">
+    <div>
+    <h5>AskExperts</h5>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Case Study</a>
+        <a href="#">Team</a>
+        <a href="#">About</a>
+    </nav>
+    <Button class="login_Btn" title="Login" />
+    </div>
+</header>
+
+<style>
+ @layer components{
+ header {
+  height: 112px;
+  /* display: flex; */
+  /* border: solid red;  */
+  background-color: var(--header-bg);
+  padding: 2.2rem;
+}
+div {
+  /* margin-inline: auto; */
+  border: solid orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem;
+  flex-shrink: 0;
+}
+
+nav {
+  display: flex;
+  border: solid green;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  gap: 1.2rem;
+  font-family: var(--font-family);
+}
+ }
+</style>

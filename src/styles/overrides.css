@@ -1,1 +1,34 @@
 /* Override styles here */
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: var(--body-text);
+}
+p {
+  font-family: var(--font-family);
+  font-size: var(--body-text);
+  line-height: var(--body-text-lineheight);
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+}
+h1 {
+  font-size: var(--heading-1);
+}
+
+h5 {
+  text-box-trim: trim-both;
+  color: var(--secondary-2);
+  font-size: var(--heading-5);
+  font-weight: var(--font-weight-heading);
+  font-family: var(--font-family-heading);
+}
