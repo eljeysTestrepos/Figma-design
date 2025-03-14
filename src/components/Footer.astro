@@ -1,8 +1,8 @@
 ---
 
 ---
-<footer>
-    <div class="full">
+<footer class="full">
+    <div class="footer">
 <h5>AskExperts</h5>
 <hr>
 <span>©2022 Consultalk. All rights reserved | Terms of Service | Privacy Policy</span>
@@ -16,9 +16,18 @@
     footer{
         display: flex;
         justify-content: center;
-        padding: 2.2rem;
+        /* align-items: center; */
+        padding-block: 2.87rem;
         background-color: var(--header-bg); 
-        /* max-height: fit-content; */
+        text-align: center;
+        height: 13.78rem;
+        
+    }
+    .footer{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
     }
     hr{
         display: flex;
@@ -29,16 +38,7 @@
         
     }
  
-    .full{
-        gap:2rem;
-         display: flex;
-         margin-inline: auto;
-        /* border: solid orange; */
-        flex-direction: column;
-        max-width: 75rem;
-        flex-shrink: 0;
-        text-align: center;
-    }
+
     span{
         color: var(--secondary-2);
         line-height: var(--body-text-lineheight);
