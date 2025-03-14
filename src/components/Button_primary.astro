@@ -1,0 +1,46 @@
+---
+// const {class: className, ...rest} = Astro.props;
+const {href} = Astro.props;
+const {class: className, ...rest} = Astro.props;
+---
+
+<a href={href} class={className} {...rest}> <slot /></a>
+
+
+
+
+
+
+<style>
+    @layer components{
+        .button-template{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        padding: 0.8rem 2rem;
+        max-width: fit-content;
+        line-height: var(--button-txt-lineheight);
+        font-size: var(  --body-text);
+        font-weight: var(--font-weight-heading);
+        font-family: var( --font-family);
+        }
+    .primary-btn{
+        background-color: var(--primary-3);
+    }
+  
+    .primary-btn:hover{
+        background-color: var(--secondary-2);
+        color:var(--primary-3);
+    }
+
+    .secondary-btn{
+        background-color: var(--secondary-2);
+        color: var(--primary-3);
+    }
+
+    .secondary-btn:hover{
+
+    }
+}
+</style>

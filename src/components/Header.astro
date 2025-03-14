@@ -1,31 +1,33 @@
 ---
 import Button from "./Button.astro"
+import Layout from "../layouts/Layout.astro"
 ---
-
-<header class="full">
+<Layout>
+<header>
     <div>
     <h5>AskExperts</h5>
-    <nav>
+    <nav class="navigation">
         <a href="#">Home</a>
         <a href="#">Case Study</a>
         <a href="#">Team</a>
         <a href="#">About</a>
     </nav>
-    <Button class="login_Btn" title="Login" />
+    <Button class="login-Btn" title="Login" />
     </div>
 </header>
-
+</Layout>
 <style>
  @layer components{
  header {
-  height: 112px;
+  height: 7rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: var(--header-bg);
   padding: 2.37rem;
 }
 div {
-  /* border: solid orange; */
+  border: solid orange;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,12 +37,15 @@ div {
 }
 
 
-nav {
+.navigation {
   display: flex;
   font-size: 1.2rem;
   justify-content: space-between;
   gap: 1.2rem;
   font-family: var(--font-family);
+}
+.navigation a{
+  color:var( --secondary-2)
 }
  }
 </style>
