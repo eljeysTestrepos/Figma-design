@@ -5,17 +5,21 @@ import Heropattern from "../icons/pattern.svg"
 ---
 <section class="hero full">
   <!-- Markup her -->
-   <div class="hero-wrapper">
-  <div class="hero-text">
+  <div class="hero-wrapper">
+    <Heropattern />
+    <div class="hero-text">
     <h1>Empowering Your Business Growth</h1>
+    <div class="text-wrapper">
     <p>Discover tailored strategies and expert insights to take your business to the next level. Let us help you navigate challenges and achieve sustainable success.</p>
+  </div>
+    <div class="button-wrapper">
     <ButtonPrimary href="#"class="secondary-btn button-template">Book a Meeting</ButtonPrimary>
+  </div>
   </div>
 </div>
 <div class="hero-image">
   <img src="/images/photo.png" alt="">
   </div>
-
   <Services />
 </section>
 <style>
@@ -28,14 +32,25 @@ import Heropattern from "../icons/pattern.svg"
     color: var(--secondary-2) ;
     background-color: var(--primary-3);
     height: fit-content;
+    justify-self: end;
+    align-items: center;
   }
   .hero-text{
     border: solid orchid; 
     width: 45ch; 
-    margin-inline-end: 3rlh;
+    margin-inline: 5rlh;
+    gap:1rlh;
+  }
+
+  .text-wrapper{
+    margin-block: 1.2rem;
+  }
+
+  .button-wrapper{
+    margin-block-start: 1rlh;
   }
   .hero-wrapper{
-    display: grid;
+    display: flex;
     justify-self: end;
     align-items: center;
     border: solid green;
