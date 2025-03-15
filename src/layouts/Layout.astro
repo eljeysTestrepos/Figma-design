@@ -12,22 +12,43 @@ import "../styles/main.css";
     <title>Figma to code</title>
   </head>
   <body>
-   <slot />
+    <slot />
   </body>
 </html>
 
 <style>
   /* body {
+    --content: min(0, 100% - 75rem * 2);
   display: grid;
-  grid-template-columns: 1fr minmax(0, 120rem) 1fr;
-  > *  {
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: [full-start] 1fr [content-start] minmax(0, var(--content)) [content-end]  1fr [full-end];
+  gap: 1rlh;
+  align-items: start;
+  } */
+  body {
+    --content:75rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, var(--content-width)) 1fr;
+
+  > * {
     grid-column: 2;
   }
-    .full {
-      display: grid;
-    grid-template-areas: 1 / -1;
+
+  .full {
+    grid-column: 1 / -1;
   }
-  } */
+}
 
 
+/* .content {
+  --content: min(50ch, 100% - 1rem * 2);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr)
+    [feature-start] minmax(0, 2rem)
+    [content-start] var(--content) [content-end]
+    minmax(0, 2rem) [feature-end]
+    minmax(1rem, 1fr) [full-end];
+} */
 </style>

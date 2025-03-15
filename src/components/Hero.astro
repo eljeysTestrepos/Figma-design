@@ -1,18 +1,19 @@
 ---
 import Services from "./Services.astro";
 import ButtonPrimary from "./Button_primary.astro";
+import Heropattern from "../icons/pattern.svg"
 ---
 <section class="hero full">
   <!-- Markup her -->
-   <div class="text-wrapper">
+   <div class="hero-wrapper">
   <div class="hero-text">
     <h1>Empowering Your Business Growth</h1>
     <p>Discover tailored strategies and expert insights to take your business to the next level. Let us help you navigate challenges and achieve sustainable success.</p>
     <ButtonPrimary href="#"class="secondary-btn button-template">Book a Meeting</ButtonPrimary>
   </div>
-   </div>
-  <div class="hero-image">
-    <img src="/images/photo.png" alt="">
+</div>
+<div class="hero-image">
+  <img src="/images/photo.png" alt="">
   </div>
 
   <Services />
@@ -22,22 +23,31 @@ import ButtonPrimary from "./Button_primary.astro";
   @layer components{
   .hero{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* border: solid orange; */
+    grid-template-columns:1fr 1fr;
+    border: solid orange;
     color: var(--secondary-2) ;
+    background-color: var(--primary-3);
+    height: fit-content;
   }
   .hero-text{
-    border: solid orchid;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 45ch;
- 
+    border: solid orchid; 
+    width: 45ch; 
+    margin-inline-end: 3rlh;
   }
-  .text-wrapper{
-    background-color: var(--primary-3);
+  .hero-wrapper{
+    display: grid;
+    justify-self: end;
+    align-items: center;
+    border: solid green;
   }
   .hero-image{
+    display: grid;
+    grid-row:1;
+    grid-column: 2;
+    /* object-fit:cover; 
+    align-self: stretch; */
+    height: auto;
+    /* width: calc(75rem/2); */
   }
   }
 </style>

@@ -1,6 +1,6 @@
 /* Globale styles her */
 :root {
-  --content-width: 120rem;
+  --content-width: 75rem;
 
   --primary-1: #ffcc4a;
   --primary-2: #4eaf4e;
@@ -82,14 +82,34 @@ h5 {
   font-family: var(--font-family-heading);
 }
 
-/* main {
+/* body {
   display: grid;
   grid-template-columns: 1fr minmax(0, var(--content-width)) 1fr;
-  > * {
+  > *,
+  * {
     grid-column: 2;
   }
   .full {
     display: grid;
     grid-column: 1 / -1;
+  }
+} */
+
+/* body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: [full-start] 1fr [content] minmax(0, 1200px) 1fr [full-end];
+  gap: 1rlh;
+  align-items: start;
+
+  > *,
+  * > .full {
+    grid-column: full;
+    display: inherit;
+    grid: auto / subgrid;
+
+    > :not(&) {
+      grid-column: content;
+    }
   }
 } */
