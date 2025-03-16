@@ -3,20 +3,103 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import MicroTitles from "../components/Micro_titles.astro";
+import Checkmark from "../icons/checkmark.svg";
+import Heropattern from "../icons/pattern.svg"
 ---
 <!--Todo for fredag 14/3 lav hero plus fjern dette og lav en ny brance -->
 <Layout>
 
   <Header />
   <Hero />
+  <section class="index-section-1 flow-space" >
+    <figure>
+      <Heropattern class="svg" />
+    <img src="/images/talkingPeople.jpg" alt="two people whos talking">
+  </figure>
+  <div class="section-1-text-wrapper">
+   <MicroTitles class="primary-micro-title">WE'LL WORK WITH YOU</MicroTitles>
+    <h2>What To Expect</h2>
+    <p>Our collaboration is built on transparency, efficiency, and measurable results. Together, we create strategies tailored to your unique needs and goals.</p>
+    <ul class="checklist">
+    <li> <div class="icon"> <Checkmark class="checkmark" /></div> Collaborate to build actionable strategies that drive sustainable growth and deliver tangible outcomes.</li>
+    <li> <div class="icon"> <Checkmark class="checkmark"  /> </div>
+      Identify opportunities to optimize processes and implement impactful solutions with measurable results.
+    </li>
+    </ul>
+  </div>
+  </section>
   <Footer />
 
 </Layout>
 
 <style>
-/* body{
-  border: solid red; 
-} */
+.index-section-1{
+  border: solid pink;
+  display: inline-flex;
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3.5rem;
+  grid-column: feature;
+}
+.svg{
+  position: absolute;
+  top:-2rem;
+  left:-4rem;
+  z-index: -1;
+}
+* svg.checkmark {
+  color: green;
+}
+figure{
+  display: block;
+  position: relative;
+  margin-inline: auto;
+
+  &::before{
+    content:" ";
+    position: absolute;
+    background: var(--figur-bg-clr);
+    width: 164px;
+    height: 183px;
+    z-index: -2;
+    transform: rotate(-90deg);
+    top:-2rem;
+    left:-2rem;
+    border-radius: 1.2rem;
+  }
+}
+
+h2{
+  --flow-space: 1.1rem;
+}
+p{
+  color:var(--text-clr) ;
+  --flow-space: 1.1rem;
+}
+
+li{
+  color:var(--text-clr);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+.checklist{
+  --flow-space: 1.5rem;
+  padding-inline: 0px;
+  display: grid;
+  line-height: 1.5;
+  gap: 1rem;
+  width: 45ch;
+}
+
+.section-1-text-wrapper{
+  > * + * {
+    padding-block-start: var(--flow-space, 3rem);
+  }
+}
+
 
 
 

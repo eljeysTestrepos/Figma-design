@@ -1,0 +1,28 @@
+---
+const {text} = Astro.props
+const {class: className, ...rest} = Astro.props;
+---
+
+<span class={className} {...rest}><slot /></span>
+
+
+<style>
+    .primary-micro-title{
+        background-color: var(--primary-1);
+        color: var(--primary-3);
+        display: flex;
+        padding-inline: .8rem;
+        width: fit-content;
+        border-radius: 1.2rem;
+    }
+    .secondary-micro-title{
+        background-color: var(--primary-2);
+        color: var(--secondary-2);
+        display: flex;
+        padding-inline: .8rem;
+        width: fit-content;
+        border-radius: 1.2rem;
+    }
+
+
+</style>

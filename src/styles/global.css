@@ -5,6 +5,7 @@
   --primary-1: #ffcc4a;
   --primary-2: #4eaf4e;
   --primary-3: #181818;
+  --figur-bg-clr: #4eaf4e;
   --secondary-1: #f5f5f5;
   --secondary-2: #fff;
   --text-clr: #595566;
@@ -72,6 +73,9 @@ h5 {
 }
 h1 {
   font-size: var(--heading-1);
+}
+h2 {
+  font-size: var(--heading-2);
 }
 
 h5 {
