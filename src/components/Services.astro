@@ -1,5 +1,6 @@
 ---
 //@ts-nocheck
+import ButtonPrimary from "./Button_primary.astro";
 const servicesData = await fetch(
   "https://frontend-design-theme.netlify.app/api/services"
 ).then((response) => response.json());
@@ -11,14 +12,45 @@ const servicesData = await fetch(
       <li>
         <h2>{service.title}</h2>
         <p>{service.description}</p>
-        <a href="#0">{service.buttonText}</a>
+        <div class="button-wrapper">
+        <ButtonPrimary class="primary-btn button-template" href="#0">{service.buttonText}</ButtonPrimary>
+        </div>
       </li>
     ))
   }
 </ul>
 
 <style>
-  ul{
-    display: none;
+  @layer components{
+    ul{
+      border: solid red;
+      display: flex;
+      padding-inline-start: 0;
+      gap: .6rem;
+    }
+    
+    
+    /*Jeg er kommet til at skulle aligne content center i li */
+    li{
+      width: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--card-border-r);
+    border: 1px solid #262626E5;
+    backdrop-filter: blur(1rem);
+    flex: 1 0 0;
+    padding: 2.875rem;
+    background-color: #262626E5;
+    > * + * {
+    padding-block-start: var(--flow-space, 3rem);
   }
+  }
+  h2{
+    font-size: var(--heading-6);
+  }
+}
+p{
+  --flow-space: .5rem;
+}
+
 </style>

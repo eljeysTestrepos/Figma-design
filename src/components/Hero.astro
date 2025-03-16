@@ -20,11 +20,19 @@ import Heropattern from "../icons/pattern.svg"
 <div class="hero-image">
   <img src="/images/photo.png" alt="">
   </div>
-  <Services />
 </section>
+  <section class="service-wrapper feature">
+    <Services />
+  </section>
 <style>
   /* Styles her */
   @layer components{
+
+    .service-wrapper{
+      margin-top: -4rlh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   .hero{
     display: grid;
     grid-template-columns:1fr 1fr;
