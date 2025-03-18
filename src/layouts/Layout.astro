@@ -24,9 +24,13 @@ import "../styles/main.css";
     --content: min(75rem, 100% - var(--gap) * 2);
     --feature:0;
 
+ 
+
+
     display: grid;
     grid-template-columns: [full-start] var(--full) var(--feature) [content-start] var(--content) [content-end] 
     var(--full)[full-end];
+
 
     > * {
     grid-column: content;
@@ -34,7 +38,7 @@ import "../styles/main.css";
 
   .flow-space{
   &{
-    margin-block: var(--flow-space1, 4rem);
+    margin-block-start: var(--flow-space1, 4rem);
   }
 
   }

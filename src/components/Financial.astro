@@ -6,7 +6,8 @@ const financialData = await fetch(
 import ButtonPrimary from "./Button_primary.astro";
 ---
 <!--mandag 17/3 fiks fectching  -->
-<ul class="full">
+<sectio class="full scroll-container">
+<ul>
   {
     financialData.values.map(async (item) => {
       const Icon = await import(`../icons/${item.icon}.svg`).then(
@@ -24,7 +25,7 @@ import ButtonPrimary from "./Button_primary.astro";
     })
   }
 </ul>
-
+</section>
 
 
 
@@ -57,17 +58,53 @@ svg{
   fill: var(--primary-3);
 }
 
+.scroll-container{
+  /* display: grid;
+  grid-template-columns: subgrid; */
+  /* border: solid green; */
+}
+/* .full> * {
+  grid-column: content;
+} */
 ul{
   display: flex;
-  grid-column: full;
+  grid-column:full;
     border: solid blue;
-    /* sroll-snap-type: inline mandatory;  */
+    sroll-snap-type: inline mandatory; 
+    overflow-x:auto;
+    gap:1rem;
+    /* scroll-snap-align:start; */
+  padding-inline: max(20px, 50% 120rem)/2;
+    scroll-padding-inline-start:max(20px, 50% - 120rem)/2;
+    margin-block-start: var(--flow-space1, 2rem);
 
 }
 li{
-  border-radius: var( --card-bord-r)
+  padding: 2rem 2.1rem;
+  border-radius: var( --card-bord-r);
   background-color: #Ebebeb;
+  flex-basis: min(35%, 379px);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  > * + * {
+    padding-block-start: var(--flow-space, 2rem);
+  }
+  p{
+    --flow-space: 1rem;
+  }
 }
+
+li:hover{
+  background-color: var(--primary-3);
+  *{
+    color: var(--secondary-2)
+  }
+  svg{
+  fill: var(--primary-1);
+}
+}
+
+
 }
 
   </style>
