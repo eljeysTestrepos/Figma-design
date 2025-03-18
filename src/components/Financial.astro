@@ -1,0 +1,73 @@
+---
+//@ts-nocheck
+const financialData = await fetch(
+  "https://frontend-design-theme.netlify.app/api/financialProjections"
+).then((response) => response.json());
+import ButtonPrimary from "./Button_primary.astro";
+---
+<!--mandag 17/3 fiks fectching  -->
+<ul class="full">
+  {
+    financialData.values.map(async (item) => {
+      const Icon = await import(`../icons/${item.icon}.svg`).then(
+        (module) => module.default
+      );
+
+      return (
+        <li>
+          <Icon />
+          <h2>{item.title}</h2>
+          <p>{item.description}</p>
+          <a href={item.link.url} >{item.link.text}</a>
+        </li>
+      );
+    })
+  }
+</ul>
+
+
+
+
+ <!-- <ul>
+//     {
+//       financialData.value.map((values) => (
+//         <li>
+//           {/* <h1>{financials.}</h1> */}
+//         <svg>{values.icon}</svg>
+//           <h2>{values.title}</h2>
+//           <p>{values.description}</p>
+//           <div class="button-wrapper">
+//           <ButtonPrimary class="primary-btn button-template" href="#0">{values.link}</ButtonPrimary>
+//           </div>
+//         </li>
+//       ))
+//     }
+//   </ul> -->
+
+
+  <style>
+@layer components{
+p{
+  color: var(--text-clr)
+}
+    h2{
+      color: var(--primary-3)
+    }
+svg{
+  fill: var(--primary-3);
+}
+
+ul{
+  display: flex;
+  grid-column: full;
+    border: solid blue;
+    /* sroll-snap-type: inline mandatory;  */
+
+}
+li{
+  border-radius: var( --card-bord-r)
+  background-color: #Ebebeb;
+}
+}
+
+  </style>

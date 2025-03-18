@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import MicroTitles from "../components/Micro_titles.astro";
 import Checkmark from "../icons/checkmark.svg";
 import Heropattern from "../icons/pattern.svg"
+import Financial from "../components/Financial.astro";
 ---
 <!--Todo for fredag 14/3 lav hero plus fjern dette og lav en ny brance -->
 <Layout>
@@ -29,6 +30,9 @@ import Heropattern from "../icons/pattern.svg"
     </ul>
   </div>
   </section>
+<section class="index-section-2" >
+  <Financial />
+</section>
   <Footer />
 
 </Layout>
@@ -41,7 +45,6 @@ import Heropattern from "../icons/pattern.svg"
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 3.5rem;
-  grid-column: feature;
 }
 .svg{
   position: absolute;
@@ -98,6 +101,15 @@ li{
   > * + * {
     padding-block-start: var(--flow-space, 3rem);
   }
+
+  .index-section-2{
+    display: flex;
+    border: solid blue;
+    /* sroll-snap-type: inline mandatory; 
+    overflow-x:auto ; */
+  }
+
+
 }
 
 

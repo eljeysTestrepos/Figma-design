@@ -21,7 +21,11 @@ import Button from "./Button.astro"
   justify-content: center;
   align-items: center;
   background-color: var(--header-bg);
-  padding: 2.37rem;
+  padding-block: 2.37rem;
+}
+
+.full> * {
+  grid-column: content;
 }
 div {
   border: solid orange;
@@ -29,7 +33,6 @@ div {
   justify-content: space-between;
   align-items: center;
   max-width: 75rem;
-  width: 75rem;
   flex-shrink: 0;
 }
 
