@@ -8,21 +8,21 @@ import MicroTitles from "./Micro_titles.astro";
 const percent = 0;
 ---
 
-<section class="experience-wrapper">
-    <MicroTitles class="secondary-micro-title">Experience</MicroTitles>{
- experienceData.stats.map((item) => (
+<section class="experience-container full">
+<section class="experinence-wrapper">
     <div class="experience">
-        <h2>{item.heading}</h2>
-        <p>{item.subheading}</p>
-    </div>
+        <MicroTitles class="secondary-micro-title">Experience</MicroTitles>
+        <h2>More than 25 years of experience</h2>
+        <p>3000+ our clients are insured around the World</p>
+    </div>{
+ experienceData.stats.map((item) => (
     <div class="stats">
-     
-        <div class="stat" define:vars={{percent:item.value}}></div> 
-        {/* <div class="stat" style='--percent:${experience.value}' ></div>  */}
-     </div>
+        <div class="stat" style={`--percent:${item.value};`}></div> 
     <span>{item.label}</span>
+     </div>
     ))
 }
+</section>
 </section>
 
 
@@ -30,24 +30,61 @@ const percent = 0;
 
 <style>
 
-.experience-wrapper{
+.experience-container{
     background-color: #FBC336;
+    padding-block:6rem;
+}
+.experinence-wrapper{
+    display: grid;
+    grid-column: content;
+    grid-template-columns: repeat(4, 1fr);
+    border: solid red;
+    gap: 3rem;
+}
+.experience{
+    border: solid green;
+    grid-column: 1;
+    align-items: center;
+    margin-block-end: 2rem;
+    > * + * {
+    padding-block-start: var(--flow-space, 1.2rem);
+  }
+  p{
+    color: var(--primary-3);
+  }
+}
+.stats-container{
+    border: solid green;
+    display: flex;
+    flex-direction: row;
 }
 
 
 
 
     .stats {
-  display: flex;
-  gap: 1rem;
-  width: min(400px, 100% - 1rem);
-  background-color: #FBC336;
+    border: solid turquoise;
+    gap: 1rem;
+    width: min(400px, 100%);
+    background-color: #FBC336;
+        font-size: 2rem;
+    font-weight:700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span{
+        font-weight: var(--font-weight-heading);
+        font-size: 1rem;
+    } 
 }
 
 .stat {
   --p: calc(var(--percent) * 1%);
   --border-width: 5px;
   --border-color: #fff;
+  text-align: center;
 
   aspect-ratio: 1;
   width: 150px;
