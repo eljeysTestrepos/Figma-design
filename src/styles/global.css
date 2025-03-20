@@ -1,6 +1,8 @@
 /* Globale styles her */
 :root {
   --content-width: 75rem;
+  --section-padding: 6rem;
+  --section-margin-botton: 2rem;
 
   --primary-1: #ffcc4a;
   --primary-2: #4eaf4e;
@@ -56,7 +58,7 @@ p {
   font-family: var(--font-family);
   font-size: var(--body-text);
   line-height: var(--body-text-lineheight);
-  width: 45ch;
+  max-width: 75ch;
   color: var(--secondary-2);
 }
 li {
