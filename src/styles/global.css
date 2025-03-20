@@ -3,6 +3,9 @@
   --content-width: 75rem;
   --section-padding: 6rem;
   --section-margin-botton: 2rem;
+  --gap-s: 1rem;
+  --gap-m: 2rem;
+  --gap-l: 3rem;
 
   --primary-1: #ffcc4a;
   --primary-2: #4eaf4e;
@@ -10,6 +13,9 @@
   --figur-bg-clr: #4eaf4e;
   --secondary-1: #f5f5f5;
   --secondary-2: #fff;
+  --icon-bgc1: #eaeaea;
+  --icon-bgc2: #a4eda4;
+  --icon-bgc3: #ffecbb;
   --text-clr: #595566;
   --heading-clr: #1c1c1c;
   --header-bg: rgba(27, 27, 27, 0.91);

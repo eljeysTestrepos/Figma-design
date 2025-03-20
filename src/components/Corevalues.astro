@@ -3,7 +3,7 @@
 const coreValuesData = await fetch(
   "https://frontend-design-theme.netlify.app/api/coreValues"
 ).then((response) => response.json());
-console.log(coreValuesData);
+// console.log(coreValuesData);
 import MicroTitles from "./Micro_titles.astro";
 import Button_primary from "./Button_primary.astro";
 ---
@@ -53,7 +53,6 @@ import Button_primary from "./Button_primary.astro";
 <style>
 @layer components{
   .core-values-wrapper{
-    /* border: solid orange; */
     background-color: var(--primary-3);
     padding-block: var(--section-padding);
   }
@@ -61,13 +60,11 @@ import Button_primary from "./Button_primary.astro";
   grid-column: content;
 }
   .core-values-text-container {
-    /* border: solid turquoise; */
     display: grid;
     
     margin-block-end: var(--section-margin-botton);
   }
   .core-values-text {
-    /* border: 2px solid pink; */
     color: var(--secondary-2);
     > * + * {
       padding-block-start: var(--flow-space, 0.5rem);
@@ -76,7 +73,6 @@ import Button_primary from "./Button_primary.astro";
   }
 
   .button-container {
-    /* border: solid green; */
     flex-shrink: 0;
     grid-column: 2;
     align-self: flex-end;

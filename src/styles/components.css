@@ -6,4 +6,39 @@
   --hover-2-btn-bg-clr: #ffe5a2;
 
   --card-bord-r: 1.2rem;
+
+  /*Icon background-colors*/
+  --icon-bgc1: #eaeaea;
+  --icon-bgc2: #a4eda4;
+  --icon-bgc3: #ffecbb;
+
+  /*Icon border-colors*/
+  --icon-primary-border: #deaa27;
+  --icon-secondary-border: #4eaf4e;
+  --icon-tertiary-border: #181818;
+}
+
+[data-icon-color="primary"] {
+  background-color: var(--icon-bgc3);
+  * {
+    color: var(--icon-primary-border);
+  }
+}
+
+[data-icon-color="secondary"] {
+  background-color: var(--icon-bgc2);
+  * {
+    color: var(--icon-secondary-border);
+  }
+}
+
+[data-icon-color="tertiary"] {
+  background-color: var(--icon-bgc1);
+  * {
+    color: var(--icon-tertiary-border);
+  }
+}
+
+.img-border-radius {
+  border-radius: 1.2rem;
 }

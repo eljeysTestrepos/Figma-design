@@ -1,3 +1,168 @@
 ---
-
+import MicroTitles from "./Micro_titles.astro";
+import Phone from "../icons/phone.svg";
+import Clock from "../icons/clock.svg";
+import Pin from "../icons/pin.svg";
+import Heropattern from "../icons/pattern.svg";
 ---
+
+<section class="proccess-wrapper">
+  <section class="proccess-info">
+    <div class="proccess-text">
+      <MicroTitles class="primary-micro-title">Proccess</MicroTitles>
+      <h2>Contact Us. It’s Easy</h2>
+      <p>
+        Leverage agile frameworks to provide a robust synopsis for high level
+        overviews. Iterative approaches to corporate strategy foster
+        collaborative.
+      </p>
+    </div>
+    <ul class="contact-info" role="list">
+      <li>
+        <div class="icon" data-icon-color="primary"><Phone /></div>
+        <div class="info-container">
+          <span>Call Today</span>
+          <span>+1 800 100 900</span>
+        </div>
+      </li>
+      <li>
+        <div class="icon" data-icon-color="secondary"><Clock /></div>
+        <div class="info-container">
+          <span>Monday To Friday</span>
+          <span>9AM - 5PM</span>
+        </div>
+      </li>
+      <li>
+        <div class="icon" data-icon-color="tertiary"><Pin /></div>
+        <div class="info-container">
+          <span>Monday To Friday</span>
+          <span>9AM - 5PM</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="image-gallery">
+    <figure class="figure-content figur-img-1">
+      <img
+        src="/images/girl_looking_straight.jpg"
+        alt="girl sitting on a chair and looking straight into the camera"
+        class="img-border-radius"
+      />
+    </figure>
+
+    <figure class="figur-img-2">
+      <Heropattern class="svg-img-2" />
+      <img
+        src="/images/two_girls_discus.jpg"
+        alt="two girls sitting on a chair and talking"
+        class="img-border-radius"
+      />
+    </figure>
+
+    <figure class="figur-img-3">
+      <img
+        src="/images/two_pair_of_hands.jpg"
+        alt="two girls sitting on a chair and with their hands i front of them"
+        class="img-border-radius"
+      />
+    </figure>
+  </section>
+</section>
+
+<style>
+  @layer components {
+    .proccess-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      grid-auto-rows: auto;
+      gap: 4rem;
+      padding-block: var(--section-padding);
+    }
+    .proccess-info{
+      display: grid;
+    }
+    .proccess-text {
+
+      p {
+        color: var(--text-clr);
+      }
+      > * + * {
+      padding-block-start: var(--flow-space, 0.5rem);
+    }
+    }
+    .contact-info {
+      display: grid;
+      grid-column: 1;
+      gap: var(--gap-m);
+      span {
+        color: var(--text-clr);
+      }
+    }
+
+    li {
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      gap:var(--gap-s);
+
+    }
+
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+    }
+    .image-gallery {
+      width: fit-content;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+
+    }
+    .figur-img-1 {
+      display: grid;
+      grid-row: span 2;
+    }
+    .figur-img-2 {
+      display: grid;
+      position: relative;
+      margin-inline: auto;
+    }
+    .svg-img-2 {
+      display: block;
+      z-index: -1;
+      position:absolute;
+      top: -1rem;
+      right: -2rem;
+    }
+
+
+    .figure-content {
+      display: block;
+      position: relative;
+      margin-inline: auto;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        background: var(--figur-bg-clr);
+        width: 164px;
+        height: 183px;
+        z-index: -2;
+        transform: rotate(-90deg);
+        bottom: -2rem;
+        left: -2rem;
+        border-radius: 1.2rem;
+      }
+    }
+  }
+</style>

@@ -38,11 +38,9 @@ const percent = 0;
     display: grid;
     grid-column: content;
     grid-template-columns: repeat(4, 1fr);
-    /* border: solid red; */
     gap: 3rem;
 }
 .experience{
-    /* border: solid green; */
     grid-column: 1;
     align-items: center;
     margin-block-end: 2rem;
@@ -58,8 +56,7 @@ const percent = 0;
 
 
     .stats {
-    /* border: solid turquoise; */
-    gap: 1rem;
+    gap: var(--gap-s);
     width: min(400px, 100%);
     background-color: #FBC336;
         font-size: 2rem;
@@ -116,11 +113,7 @@ const percent = 0;
     border: 2px solid #fff;
     offset-path: border-box;
     offset-distance: var(--p);
-    /*Tager udagngspunkt i den yderste del af      borderen. det kan løses ved nedstående beregning*/
     offset-anchor: 50% calc(50% - var(--border-width) / 2);
-
-    /*ændringer der måske ikke skal gemmes.*/
-
     transition: var(--p) 3s var(--easing);
     @starting-style {
       translate: 0, 25%;
